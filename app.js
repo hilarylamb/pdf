@@ -20,6 +20,11 @@ const upload = multer({ storage: storage }).single('avatar'); //single file with
 
 app.set('view engine', 'ejs'); //allows us to create file views
 
+//routes
+app.get('/', (req, res) => {
+  res.render('index');
+});
+
 //start up our server
-const PORT = 5000 || process.env.PORT;
+const PORT = 3000 || process.env.PORT;
 app.listen(PORT, () => console.log("Hey I'm running"));
