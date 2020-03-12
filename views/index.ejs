@@ -8,6 +8,9 @@
   </head>
   <body>
     <h1>Image to PDF</h1>
-    <form action="/upload"></form>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+      <input type="file" name="avatar" />
+      <button type="submit">Convert</button>
+    </form>
   </body>
 </html>
