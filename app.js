@@ -16,6 +16,10 @@ const storage = multer.diskStorage({
 });
 
 //
-const upload = multer({ storage: storage }).single('avatar');
+const upload = multer({ storage: storage }).single('avatar'); //single file with a field name
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'ejs'); //allows us to create file views
+
+app.get('/uploads', (req, res) => {
+  console.log('hey');
+});
